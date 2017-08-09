@@ -1,8 +1,15 @@
 {{#recipe-listing recipe=model}}
-    <h3>Ingredients</h3>
-    <dl class="dl-horizontal">
-      {{#each model.ingredients as |ingredient|}}
-        <dd>{{ingredient.description}}</dd>
-      {{/each}}
-    </dl>
+  <h3>Ingredients</h3>
+  <dl class="dl-horizontal">
+    {{#each model.ingredients as |ingredient|}}
+      <dd>{{ingredient.description}}</dd>
+    {{/each}}
+  </dl>
+  <h3>Instructions</h3>
+  <dl class="dl-horizontal">
+    {{#each model.instructions as |instruction index|}}
+    <dt>{{index}}</dt>
+    <dd>{{instruction.description}}</dd>
+    {{/each}}
+  </dl>
 {{/recipe-listing}}

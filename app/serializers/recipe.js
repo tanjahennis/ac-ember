@@ -2,6 +2,7 @@ import FirebaseSerializer from 'emberfire/serializers/firebase';
 
 export default FirebaseSerializer.extend({
   attrs: {
-    ingredients: { embedded: 'always' }
+    ingredients: { embedded: 'always' },
+    instructions: { embedded: 'always' }
   }
 });
