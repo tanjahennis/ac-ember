@@ -1,20 +1,22 @@
 {{#each model as |recipe|}}
   <article class="listing">
-    <h3>{{recipe.title}}</h3>
-    <p>
-      {{recipe.description}}
-    </p>
-    <dl>
-      <dt>source</dt>
-      <dd><a href="{{recipe.source}}">{{recipe.source}}</a></dd>
-      <dt>
-        Minutes to prepare
-      </dt>
-      <dd>{{recipe.prepTime}}</dd>
-      <dt>
-        Minutes to cook
-      </dt>
-      <dd>{{recipe.cookTime}}</dd>
-    </dl>
+    <div class="recipe-image" style="background-image: url('{{recipe.image}}');" >
+      <h3>{{recipe.title}}</h3>
+      <p>
+        {{recipe.description}}
+      </p>
+      <dl>
+        <dt>source</dt>
+        <dd><a href="{{recipe.source}}">{{recipe.source}}</a></dd>
+        <dt>
+          Minutes to prepare
+        </dt>
+        <dd>{{recipe.prepTime}}</dd>
+        <dt>
+          Minutes to cook
+        </dt>
+        <dd>{{recipe.cookTime}}</dd>
+      </dl>
+    </div>
   </article>
 {{/each}}
