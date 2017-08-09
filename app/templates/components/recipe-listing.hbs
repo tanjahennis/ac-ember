@@ -1,5 +1,5 @@
 <article class="listing">
-  <h3>{{recipe.title}}</h3>
+  <h3>{{#link-to "recipes.show" recipe}}{{recipe.title}}{{/link-to}}</h3>
   <p>
     {{recipe.description}}
   </p>
