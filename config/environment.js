@@ -21,7 +21,13 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    firebase: {
+      apiKey: 'AIzaSyB0O8ZIlbndyvfwqjiVBgZutIy3-IP7PTg',
+      authDomain: 'ember-cook-book-ed9ef.firebaseapp.com',
+      databaseURL: 'https://ember-cook-book-ed9ef.firebaseio.com',
+    },
   };
 
   if (environment === 'development') {
