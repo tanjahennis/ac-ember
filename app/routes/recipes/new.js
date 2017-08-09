@@ -1,12 +1,7 @@
-import Ember from 'ember';
+import RecipeActions from './actions';
 
-export default Ember.Route.extend({
+export default RecipeActions.extend({
   model() {
-    return this.get('store').createRecord('recipe')
-  },
-  actions: {
-    save() {
-      this.currentModel.save().then(() => this.transitionTo('recipes'));
-    }
+    return this.get('store').createRecord('recipe');
   },
 });

@@ -7,4 +7,5 @@ export default DS.Model.extend({
   prepTime: DS.attr(),
   cookTime: DS.attr(),
   image: DS.attr(),
+  ingredients: DS.hasMany('ingredient', { async:  false, inverse: null }),
 });

@@ -1,15 +1,7 @@
-import Ember from 'ember';
+import RecipeActions from './actions';
 
-export default Ember.Route.extend({
+export default RecipeActions.extend({
   model(params) {
     return this.get('store').findRecord('recipe', params.recipe_id);
-  },
-  actions: {
-    save() {
-      this.currentModel.save().then(() => this.transitionTo('recipes'));
-    },
-    willTransition() {
-      this.controller.get('model').rollbackAttributes();
-    }
-  },
+  }
 });
