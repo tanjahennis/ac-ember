@@ -1,0 +1,19 @@
+<article class="listing">
+  <h3>{{recipe.title}}</h3>
+  <p>
+    {{recipe.description}}
+  </p>
+<div {{action 'toggleImageSize'}} class="recipe-image {{if isLarge "large"}}" style="background-image: url('{{recipe.image}}');" ></div>
+<dl>
+    <dt>source</dt>
+    <dd><a href="{{recipe.source}}">{{recipe.source}}</a></dd>
+    <dt>
+      Minutes to prepare
+    </dt>
+    <dd>{{recipe.prepTime}}</dd>
+    <dt>
+      Minutes to cook
+    </dt>
+    <dd>{{recipe.cookTime}}</dd>
+  </dl>
+</article>
